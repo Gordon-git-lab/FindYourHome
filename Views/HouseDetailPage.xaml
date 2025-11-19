@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FindYourHome.ViewModels"
+             x:Class="FindYourHome.Views.HouseDetailPage">
+    <StackLayout Padding="10">
+        <Label Text="{Binding House.Title}" FontAttributes="Bold" FontSize="20"/>
+        <Image Source="{Binding House.ImageUrl}" HeightRequest="200" />
+        <Label Text="{Binding House.Address}" />
+        <Label Text="Prix: {Binding House.Price}" />
+        <Label Text="{Binding House.Description}" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FindYourHome.ViewModels"
+             x:Class="FindYourHome.Views.LoginPage"
+             BackgroundColor="{StaticResource BackgroundWhite}">
+    <ContentPage.BindingContext>
+        <vm:AuthViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Find Your Home" FontAttributes="Bold" FontSize="28" TextColor="{StaticResource PrimaryBlue}" HorizontalOptions="Center"/>
+        <Entry Placeholder="Email" Text="{Binding Email}" Keyboard="Email"/>
+        <Entry Placeholder="Mot de passe" IsPassword="True" Text="{Binding Password}"/>
+        <Button Text="Se connecter" Command="{Binding LoginCommand}"/>
+        <Button Text="S'inscrire" Command="{Binding RegisterCommand}" BackgroundColor="{StaticResource AccentOrange}"/>
+        <Label Text="FOTSO GORDON RUBBEN" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource PrimaryBlue}"/>
+    </StackLayout>
+</ContentPage>

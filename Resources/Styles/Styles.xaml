@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui">
+    <!-- Palette -->
+    <Color x:Key="PrimaryBlue">#0A6ED1</Color>
+    <Color x:Key="AccentOrange">#FF8C42</Color>
+    <Color x:Key="BackgroundWhite">#FFFFFF</Color>
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundWhite}" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryBlue}" />
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryBlue}" />
+        <Setter Property="TextColor" Value="{StaticResource BackgroundWhite}" />
+    </Style>
+</ResourceDictionary>
