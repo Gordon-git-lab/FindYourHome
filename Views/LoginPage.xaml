@@ -1,1 +1,40 @@
 <ContentPage />
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="FindYourHome.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:FindYourHome.ViewModels"
+    BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="25">
+
+            <Label Text="FindYourHome"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Entry Placeholder="Email" 
+                   Keyboard="Email"
+                   Text="{Binding Email}" />
+
+            <Entry Placeholder="Mot de passe"
+                   IsPassword="True"
+                   Text="{Binding Password}" />
+
+            <Button Text="Se connecter"
+                    Command="{Binding LoginCommand}"
+                    Style="{StaticResource PrimaryButton}" />
+
+            <Button Text="Créer un compte"
+                    Clicked="OnRegisterClicked"
+                    Style="{StaticResource AccentButton}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
